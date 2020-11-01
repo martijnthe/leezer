@@ -1,7 +1,5 @@
-import { range } from "lodash";
 import React, { ReactNode } from "react";
 import styled from "styled-components";
-import star from "./star.svg";
 import { ratingFromPointsAndLevel } from "./Rating";
 import Stars from "./Stars";
 

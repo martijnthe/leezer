@@ -1,26 +1,43 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useReducer } from "react";
+import "./App.css";
+import styled from "styled-components";
+import { INITIAL_STATE } from "./GameState";
+import reducer from "./reducer";
+import { useInterval } from "react-use";
+import StartPage from "./StartPage";
+import PlayPage from "./PlayPage";
+import FinishPage from "./FinishPage";
 
-function App() {
+const Container = styled.div`
+  text-align: center;
+  min-height: 70vh;
+  padding: 30px;
+`;
+
+const INTERVAL_MILLIS = 100;
+
+export default function App() {
+  const [state, dispatch] = useReducer(reducer, INITIAL_STATE);
+  useInterval(
+    () => dispatch({ type: "tick", intervalMillis: INTERVAL_MILLIS }),
+    state.phase === "play" ? INTERVAL_MILLIS : null
+  );
+  const timeProgressPercent =
+    100 - (state.timeMillis / state.totalTimeMillis) * 100;
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container>
+      {state.phase === "start" && <StartPage dispatch={dispatch} />}
+      {state.phase === "play" && (
+        <PlayPage
+          {...state}
+          dispatch={dispatch}
+          timeProgressPercent={timeProgressPercent}
+        />
+      )}
+      {state.phase === "finish" && (
+        <FinishPage {...state} dispatch={dispatch} />
+      )}
+    </Container>
   );
 }
-
-export default App;

@@ -1,0 +1,43 @@
+import Dictionary from "./Dictionary";
+
+const dictionary: Dictionary = {
+  name: "kern twee",
+  words: [
+    "pet",
+    "pit",
+    "tip",
+    "tim",
+    "tem",
+    "in",
+    "vin",
+    "tin",
+    "tik",
+    "kit",
+    "kaak",
+    "taak",
+    "kaat",
+    "maat",
+    "met",
+    "meet",
+    "eet",
+    "een",
+    "nee",
+    "neem",
+    "mis",
+    "mes",
+    "mees",
+    "meen",
+    "boot",
+    "boon",
+    "boom",
+    "oom",
+    "room",
+    "pit",
+    "poot",
+    "noot",
+    "toon",
+    "teen",
+  ],
+};
+
+export default dictionary;

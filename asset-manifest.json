@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/leezer/static/css/main.ea1455b2.chunk.css",
+    "main.js": "/leezer/static/js/main.8d619056.chunk.js",
+    "main.js.map": "/leezer/static/js/main.8d619056.chunk.js.map",
+    "runtime-main.js": "/leezer/static/js/runtime-main.4063f383.js",
+    "runtime-main.js.map": "/leezer/static/js/runtime-main.4063f383.js.map",
+    "static/js/2.574baa07.chunk.js": "/leezer/static/js/2.574baa07.chunk.js",
+    "static/js/2.574baa07.chunk.js.map": "/leezer/static/js/2.574baa07.chunk.js.map",
+    "static/js/3.6743cc6a.chunk.js": "/leezer/static/js/3.6743cc6a.chunk.js",
+    "static/js/3.6743cc6a.chunk.js.map": "/leezer/static/js/3.6743cc6a.chunk.js.map",
+    "index.html": "/leezer/index.html",
+    "static/css/main.ea1455b2.chunk.css.map": "/leezer/static/css/main.ea1455b2.chunk.css.map",
+    "static/js/2.574baa07.chunk.js.LICENSE.txt": "/leezer/static/js/2.574baa07.chunk.js.LICENSE.txt",
+    "static/media/star.da902792.svg": "/leezer/static/media/star.da902792.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.4063f383.js",
+    "static/js/2.574baa07.chunk.js",
+    "static/css/main.ea1455b2.chunk.css",
+    "static/js/main.8d619056.chunk.js"
+  ]
+}
